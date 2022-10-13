@@ -1,2 +1,2 @@
-# cse210-03
+# Jumper
 This repository has the Jumper program for CSE 210 course
