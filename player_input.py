@@ -1,4 +1,3 @@
-
 #Irvin Silva	
 class Player_Input():
     '''
@@ -6,20 +5,33 @@ class Player_Input():
 	input is in the random word.
 	'''
     def __init__(self,hidden_word=["c","a","t"]):
-        self.hidden_letters=hidden_word
-        self.player_input=input("Guess a letter [a-z]: ")
+        self._hidden_letters=hidden_word
+        self._player_input=input("Guess a letter [a-z]: ").lower()
+        self._words_used=[]
     
     def input_in_hidden_word(self):
         '''
-        This method verifies if the player's input is found in a of list letters of the hidden word
+        This method verifies if the player's input is found in a of list letters of the hidden word.
         '''
-        for i in self.hidden_letters:
-            if i in self.player_input:
+        self.verify_not_repeated_word()
+
+        for i in self._hidden_letters:
+            if i in self._player_input:
                 #print(i)
                 return i
             else:
                 #print("garbage")
                 return False
 
+    def verify_not_repeated_word(self):
+        '''
+        This method verifies there isn't a letter the player already typed.
+        '''
+        while self._player_input in self._words_used:
+            self._player_input=input("Guess a letter [a-z]: ").lower()
+        if self._player_input not in self._words_used:
+            self._words_used.append(self._player_input)
+
 #test=Player_Input()
+#test.input_in_hidden_word()
 #test.input_in_hidden_word()
