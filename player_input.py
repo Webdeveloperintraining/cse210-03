@@ -11,7 +11,7 @@ class Player_Input():
     
     def input_in_hidden_word(self):
         '''
-        This method verifies if the player's input is found in a of list letters of the hidden word.
+        This method verifies if the player's input is a letter from the the hidden word.
         '''
         self.verify_not_repeated_word()
 
@@ -25,7 +25,7 @@ class Player_Input():
 
     def verify_not_repeated_word(self):
         '''
-        This method verifies there isn't a letter the player already typed.
+        This method verifies there isn't a letter that has already already typed by the player.
         '''
         while self._player_input in self._words_used:
             self._player_input=input("Guess a letter [a-z]: ").lower()
