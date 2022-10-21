@@ -29,8 +29,9 @@ class Director():
         '''
             This function is in charge of starting the game and running the game
         '''
-        
-        self._draw_jumper.print_jumper(self._wrong_guesses)
+        print('starting game')
+        self._show_output()
+
         
         while self._playing_game:
             self._get_inputs()
@@ -70,7 +71,7 @@ class Director():
         '''
             once game has been updated the output can then be shown to the user
         '''
-
+        print(self._wrong_guesses)
         self._draw_jumper.print_jumper(self._wrong_guesses)
 
 
@@ -82,5 +83,9 @@ class Director():
                 self._playing_game = True
                 self._wrong_guesses = 0
                 self._correct_guess = False
+                self._terminal_service.hidden_letters = self._random_word.get_word()
+                self._terminal_service.clear_words_used_list()
                 self.start_game()
-
+            else:
+                print('Good bye!')
+                return False

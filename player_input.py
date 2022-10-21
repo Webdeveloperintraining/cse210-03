@@ -27,7 +27,7 @@ class Player_Input():
         This method verifies there isn't a letter that has already already typed by the player.
         '''
         while player_input in self._words_used:
-            self._player_input=input("Guess a letter [a-z]: ").lower()
+            player_input=input("Guess a letter [a-z]: ").lower()
         if player_input not in self._words_used:
             self._words_used.append(player_input)
 
