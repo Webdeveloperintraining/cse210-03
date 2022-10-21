@@ -5,7 +5,7 @@ class Player_Input():
 	input is in the random word.
 	'''
     def __init__(self,hidden_word=["c","a","t"]):
-        self._hidden_letters=hidden_word
+        self.hidden_letters=hidden_word
         self._player_input=input("Guess a letter [a-z]: ").lower()
         self._words_used=[]
     
@@ -15,13 +15,12 @@ class Player_Input():
         '''
         self.verify_not_repeated_word()
 
-        for i in self._hidden_letters:
+        for i in self.hidden_letters:
+
             if i in self._player_input:
-                #print(i)
                 return i
-            else:
-                #print("garbage")
-                return False
+
+        return False
 
     def verify_not_repeated_word(self):
         '''
