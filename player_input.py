@@ -33,10 +33,10 @@ class Player_Input():
 
     def clear_words_used_list(self):
         self._words_used.clear()
-        print(self._words_used)
+        #print(self._words_used)
 
-test=Player_Input()
-test.input_in_hidden_word()
-test.input_in_hidden_word()
-print(test._words_used)
-test.clear_words_used_list()
+#test=Player_Input()
+#test.input_in_hidden_word()
+#test.input_in_hidden_word()
+#print(test._words_used)
+#test.clear_words_used_list()
