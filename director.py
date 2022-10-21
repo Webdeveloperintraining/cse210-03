@@ -4,8 +4,6 @@ file: director.py
 this file houses the director class that is in charge of the game operations
 '''
 
-
-from numpy import True_
 from player_input import Player_Input
 from words_randomizer import WordRandomizer
 from draw_jumper import DrawJumper
