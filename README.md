@@ -22,7 +22,11 @@ This is a jumper game, a random word is generated automatically and the player h
 ## Project files
   
   director.py
+  
   draw_jumper.py
+  
   main.py
+  
   player_input.py
+  
   words_randomizer.py
