@@ -4,8 +4,11 @@ This repository has the Jumper program for CSE 210 course
 ## Authors
 
 *Jamin Pottle
+
 *Daniel Alvarez
+
 *Irvin Silva
+
 *Agustin Pariente
 
 
