@@ -30,3 +30,6 @@ This is a jumper game, a random word is generated automatically and the player h
   player_input.py
   
   words_randomizer.py
+  
+  letters_output.py
+  
