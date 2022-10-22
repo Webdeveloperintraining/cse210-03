@@ -12,7 +12,7 @@ class Player_Input():
         '''
         This method verifies if the player's input is a letter from the the hidden word.
         '''
-        player_input=input("Guess a letter [a-z]: ").lower()
+        player_input=input("Guess a letter [a-z] (type only a letter): ").lower()
         self.verify_not_repeated_word(player_input)
 
         for i in self.hidden_letters:
